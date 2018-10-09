@@ -13,17 +13,17 @@ and open the template in the editor.
         <?php
             require 'Slim/Slim.php';
             require 'database.php';
-            require 'wine_db.php';
+            require 'fighter_db.php';
             use Slim\Slim;
             \Slim\Slim::registerAutoloader();
             
             $app = new Slim();
-            $app->get('/wines','getWines');
-            $app->get('/wines/:id','getWinesById');
-            $app->get('/wines/search/:query','getWinesByName');
-            $app->post('/wines','addWine');
-            $app->put('/wines/:id','updateWine');
-            $app->delete('/wines/:id','deleteWine');
+            $app->get('/fighters','getFighters');
+            $app->get('/fighters/:id','getFighterById');
+            $app->get('/fighters/search/:query','getFighterByName');
+            $app->post('/fighters','addFighter');
+            $app->put('/fighters/:id','updateFighter');
+            $app->delete('/fighters/:id','deleteFighter');
             $app->run();
         ?>
     </body>
