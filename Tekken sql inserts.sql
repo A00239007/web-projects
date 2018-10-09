@@ -1,3 +1,6 @@
+
+DROP TABLE IF EXISTS `fighter`;
+
 create table `fighter`(
 	id integer not null auto_increment,
     name varchar(50) default null,
