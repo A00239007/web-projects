@@ -51,7 +51,7 @@
         $play_style=$fighter->play_style;
         $age=$fighter->age;
         $description=$fighter->description;
-        $query = "insert into fighter values('$name', '$play_style', '$age', '$description');";
+        $query = "insert into fighter(name, play_style, age, description) values('$name', '$play_style', '$age', '$description');";
         
         try
         {
