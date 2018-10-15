@@ -1,4 +1,3 @@
-
 DROP TABLE IF EXISTS `fighter`;
 
 create table `fighter`(
