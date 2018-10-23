@@ -27,6 +27,7 @@ create table `user`(
 	id integer not null auto_increment,
     name varchar(50) default null,
     email varchar(50) default null,
+	password varchar(50) default null,
     primary key(id)
 );
 
