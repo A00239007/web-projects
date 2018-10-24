@@ -6,7 +6,7 @@
             global $db;
             $users = $db->query($query);
             $users = $users->fetchAll(PDO::FETCH_ASSOC);
-            echo '("users": '.json_encode($users).')';
+            echo '{"users": '.json_encode($users).'}';
         } catch (Exception $ex) {
             echo '{"error":{"text":'.$e->getMessage().'}}';
         }

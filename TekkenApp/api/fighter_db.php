@@ -6,7 +6,7 @@
             global $db;
             $fighters = $db->query($query);
             $fighter = $fighters->fetchAll(PDO::FETCH_ASSOC);
-            echo '("fighters": '.json_encode($fighter).')';
+            echo '{"fighters": '.json_encode($fighter).'}';
         } catch (Exception $ex) {
             echo '{"error":{"text":'.$ex->getMessage().'}}';
         }
