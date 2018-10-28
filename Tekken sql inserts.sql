@@ -33,5 +33,5 @@ create table `user`(
     primary key(id)
 );
 
-insert into `user` values(0,'Bille Herrington','lordofthelockerroom@gmail.com','yeet101')
+insert into `user` values(0,'Jack Miller','fox30news@gmail.com','yeet101')
 
