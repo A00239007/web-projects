@@ -33,5 +33,7 @@ create table `user`(
     primary key(id)
 );
 
-insert into `user` values(0,'Jack Miller','fox30news@gmail.com','yeet101')
+insert into `user` values(0,'Jack Miller','fox30news@gmail.com','yeet101'),
+(0,'Bobby Joe','randomemail@gmail.com','inmysleep'),
+(0,'Johnny Balls','actress@gmail.com','pa55word');
 
