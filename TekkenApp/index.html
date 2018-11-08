@@ -33,14 +33,7 @@
                 <a href="#" class="text-white">Simon Harper</a>
               </div>
               <ul class="navbar-nav flex-column mt-4">
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 current"><i class="fas fa-home text-light fa-lg mr-3"></i>Dashboard</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-user text-light fa-lg mr-3"></i>Profile</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-shopping-cart text-light fa-lg mr-3"></i>Sales</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-chart-line text-light fa-lg mr-3"></i>Analytics</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-chart-bar text-light fa-lg mr-3"></i>Charts</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-table text-light fa-lg mr-3"></i>Tables</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-wrench text-light fa-lg mr-3"></i>Settings</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fas fa-file-alt text-light fa-lg mr-3"></i>Documentation</a></li>
+                <li class="nav-item"><a href="#" onClick="createFighter()" class="nav-link text-white p-3 mb-2 current"><i class="fas fa-plus text-light fa-lg mr-3"></i>Create Fighter</a></li>
               </ul>
             </div>
             <!-- end of sidebar -->
@@ -65,8 +58,33 @@
       </div>
     </nav>
     <!-- end of navbar -->
-
+    
+    
     <!-- modal -->
+    <div class="modal" tabindex="-1" role="dialog" id="createFighter">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Create Fighter</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    Name: <input type="text" name="name"/><br>
+                    Play Style: <input type="text" name="play_style"/><br>
+                    Age: <input type="text" name="age"/><br>
+                    Description: <input type="text" name="description"/><br>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Create Fighter</button>
+            </div>
+          </div>
+        </div>
+    </div>
     <div class="modal fade" id="sign-out">
       <div class="modal-dialog">
         <div class="modal-content">

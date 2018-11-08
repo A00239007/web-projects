@@ -28,7 +28,7 @@ var renderListFighters = function(data)
             unknownAges++;
         }
         totalCount++;
-        $('#table_body_fighters').append('<tr><td>'+fighter.name+'</td><td>'+fighter.play_style+'</td><td>'+fighter.age+'</td><td><a href="https://www.youtube.com/"><button>Edit</button></a></td><td><input type="button" value="Delete" onClick="deleteFighter();"/></td></tr>');
+        $('#table_body_fighters').append('<tr><td>'+fighter.name+'</td><td>'+fighter.play_style+'</td><td>'+fighter.age+'</td><td><input type="button" value="Edit" onClick="editFighter()"/></td><td><input type="button" value="Delete" onClick="deleteFighter()"/></td></tr>');
     });
     $('#total_number_fighters').append(totalCount);
     $('#total_number_fighters_female').append(totalFemaleCount);
@@ -48,6 +48,10 @@ var renderListUsers = function(data)
     $('#table_id_users').DataTable();
 };
 
+function createFighter()
+{
+    $('#createFighter').modal('show');
+}
 
 function findAllFighters()
 {
@@ -56,8 +60,7 @@ function findAllFighters()
         type: 'GET',
         url: rootURLFighters,
         dataType: "json",
-        success: renderListFighters,
-        error: console.log('fail')
+        success: renderListFighters
     });
 };
 
@@ -68,8 +71,7 @@ function findAllUsers()
         type: 'GET',
         url: rootURLUsers,
         dataType: "json",
-        success: renderListUsers,
-        error: console.log('fail')
+        success: renderListUsers
     });
 };
 
