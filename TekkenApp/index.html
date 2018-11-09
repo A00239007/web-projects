@@ -33,7 +33,7 @@
                 <a href="#" class="text-white">Simon Harper</a>
               </div>
               <ul class="navbar-nav flex-column mt-4">
-                <li class="nav-item"><a href="#" onClick="createFighter()" class="nav-link text-white p-3 mb-2 current"><i class="fas fa-plus text-light fa-lg mr-3"></i>Create Fighter</a></li>
+                <li class="nav-item"><a href="#" onClick="createFighterModal()" class="nav-link text-white p-3 mb-2 current"><i class="fas fa-plus text-light fa-lg mr-3"></i>Create Fighter</a></li>
               </ul>
             </div>
             <!-- end of sidebar -->
@@ -72,15 +72,55 @@
             </div>
             <div class="modal-body">
                 <form>
-                    Name: <input type="text" name="name"/><br>
-                    Play Style: <input type="text" name="play_style"/><br>
-                    Age: <input type="text" name="age"/><br>
-                    Description: <input type="text" name="description"/><br>
+                    Name:<br>
+                    <input type="text" id="name"/><br>
+                    Play Style:<br>
+                    <input type="text" id="playStyle"/><br>
+                    Age:<br>
+                    <input type="text" id="age"/><br>
+                    Gender:<br>
+                    <input class="cb" name="gender" type="radio" id="genderMale" value="M" onchange="verifyCheckBox(this)"/>Male<br>
+                    <input class="cb" name="gender" type="radio" id="genderFemale" value="F" onchange="verifyCheckBox(this)"/>Female<br>
+                    Description:<br>
+                    <input type="text" id="description"/><br>
                 </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Create Fighter</button>
+              <button type="button" class="btn btn-primary" onClick="createFighter()">Create Fighter</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="editFighter">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Edit Fighter</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    ID:<br>
+                    <input type="text" id="editId" disabled/><br>
+                    Name:<br>
+                    <input type="text" id="editName"/><br>
+                    Play Style:<br>
+                    <input type="text" id="editPlayStyle"/><br>
+                    Age:<br>
+                    <input type="text" id="editAge"/><br>
+                    Gender:<br>
+                    <input class="cb" name="gender" type="radio" id="editGenderMale" value="M" onchange="verifyCheckBox(this)"/>Male<br>
+                    <input class="cb" name="gender" type="radio" id="editGenderFemale" value="F" onchange="verifyCheckBox(this)"/>Female<br>
+                    Description:<br>
+                    <input type="text" id="editDescription"/><br>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" onClick="editFighter($('#editId').val())">Edit Fighter</button>
             </div>
           </div>
         </div>

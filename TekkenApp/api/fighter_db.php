@@ -50,8 +50,9 @@
         $name=$fighter->name;
         $play_style=$fighter->play_style;
         $age=$fighter->age;
+        $gender=$fighter->gender;
         $description=$fighter->description;
-        $query = "insert into fighter(name, play_style, age, description) values('$name', '$play_style', '$age', '$description');";
+        $query = "insert into fighter(name, play_style, age, gender, description) values('$name', '$play_style', '$age', '$gender', '$description');";
         
         try
         {
@@ -72,8 +73,9 @@
         $name=$fighter->name;
         $play_style=$fighter->play_style;
         $age=$fighter->age;
+        $gender=$fighter->gender;
         $description=$fighter->description;
-        $query="update fighter set name='$name', play_style='$play_style', age='$age', description='$description' where id='$id';";
+        $query="update fighter set name='$name', play_style='$play_style', age='$age', gender='$gender', description='$description' where id='$id';";
         try{
             global $db;
             $db->exec($query);

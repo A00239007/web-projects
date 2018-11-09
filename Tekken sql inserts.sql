@@ -5,7 +5,7 @@ create table `fighter`(
     name varchar(50) default null,
     play_style varchar(50) default null,
     age varchar(50) default null,
-    gender varchar(1) default null,
+    gender varchar(50) default null,
     description varchar(50) default null,
     primary key(id)
 );
